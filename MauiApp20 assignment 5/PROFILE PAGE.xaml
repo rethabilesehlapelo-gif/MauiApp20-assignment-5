@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp20_assignment_5.PROFILE_PAGE"
+             Title="PROFILE_PAGE">
+    <ScrollView Padding="20">
+
+        <VerticalStackLayout Spacing="15">
+
+            <!-- Profile Image -->
+            <Image x:Name="ProfileImage"
+                   Source="profile_png.png"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   Aspect="AspectFill"
+                   BackgroundColor="White"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20" />
+
+            <Button Text="Choose Profile"
+                Clicked="OnChoosePhotoClicked"
+                BackgroundColor="HotPink"
+                TextColor="White" />
+
+            <!-- Name -->
+            <Label Text="NAME" FontAttributes="Bold"/>
+            <Entry x:Name="NameEntry" Placeholder="Enter Name" />
+
+            <!-- Surname -->
+            <Label Text="SURNAME" FontAttributes="Bold"/>
+            <Entry x:Name="SurnameEntry" Placeholder="Enter Surname" />
+
+            <!-- Email -->
+            <Label Text="Email Address" FontAttributes="Bold"/>
+            <Entry x:Name="EmailEntry"
+               Placeholder="Enter Email"
+               Keyboard="Email" />
+
+            <!-- Bio -->
+            <Label Text="Bio" FontAttributes="Bold"/>
+            <Editor x:Name="BioEditor"
+                Placeholder="Bio"
+                HeightRequest="100"
+                AutoSize="TextChanges" />
+
+            <!-- Save Button -->
+            <Button Text="Save Profile"
+                BackgroundColor="HotPink"
+                TextColor="White"
+                Clicked="OnSaveClicked" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
